@@ -9,12 +9,17 @@
 
 var startButton = $("#start-button");
 var questionBox = $(".question-box");
-var textInBox = $("usersQuestions");
+var textInBox = $("textInBox");
+var buttonHolder = $(".buttonHolder");
+var plsWork = 0
 
 function startingQuiz() {
-    var newText = textInBox.text(textInBox.text().replace("Click Start to begin!", "This is the 1st question"));
-    textInBox.text(newText);
     startButton.remove();
+    textInBox.remove();
+    var newP = $("p");
+    newP.text("This would be the 1st question");
+    newP.attr("class", "questionOne");
+    questionBox.append(newP);
 }
 
-startButton.click(startingQuiz());
+startButton.on("click", startingQuiz());
