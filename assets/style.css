@@ -9,6 +9,16 @@ nav {
 div {
     display: flex;
     justify-content: space-around;
+    color: blue;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .question-box p {
@@ -40,6 +50,16 @@ footer {
     text-align: center;
     background-color: blue;
     color: white;
-    font-size: 20px;
-    
+    font-size: 20px; 
+}
+
+.answer-button {
+    padding-bottom: 10px;
+    padding-top: 11px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 15%;
+    background-color: red;
+    color: white;
+    border-radius: 25%;
 }
