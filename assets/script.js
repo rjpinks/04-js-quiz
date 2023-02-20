@@ -6,20 +6,30 @@
     //4 buttons appear for possible answers
 //Let's just try to implement this far first.
 
-
+//These are in the original HTMLK
 var startButton = $("#start-button");
 var questionBox = $(".question-box");
-var textInBox = $("textInBox");
+var textInBox = $("#textInBox");
 var buttonHolder = $(".buttonHolder");
-var plsWork = 0
 
-function startingQuiz() {
-    startButton.remove();
-    textInBox.remove();
-    var newP = $("p");
-    newP.text("This would be the 1st question");
-    newP.attr("class", "questionOne");
-    questionBox.append(newP);
+//Functions
+
+function buttonMaker() {
+    var newButton = document.createElement("button");
+    var newContent = document.createTextNode("Answer");
+    newButton.appendChild(newContent);
+    newButton.classList("btn", "btn-danger");
+    buttonHolder.append(newButton);
 }
 
-startButton.on("click", startingQuiz());
+function startingQuiz() {
+    startButton.text("Answer 1");
+    textInBox.text("This would be the 1st question");
+    buttonMaker();
+    buttonMaker();
+    buttonMaker();
+}
+
+// startButton.on("click", startingQuiz());
+
+//Right now I am just trying to get the newButton to take on the the appropriate classes for styling
