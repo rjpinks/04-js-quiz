@@ -6,11 +6,14 @@
     //4 buttons appear for possible answers
 //Let's just try to implement this far first.
 
+//PSEUDOCODE FOR 
+
 //These are in the original HTMLK
 var startButton = $("#start-button");
 var questionBox = $(".question-box");
 var textInBox = $("#textInBox");
 var buttonHolder = $(".buttonHolder");
+var bodyEl = $("body");
 
 //Functions
 
@@ -18,18 +21,16 @@ function buttonMaker() {
     var newButton = document.createElement("button");
     var newContent = document.createTextNode("Answer");
     newButton.appendChild(newContent);
-    newButton.classList("btn", "btn-danger");
+    newButton.classList = "answer-button";
     buttonHolder.append(newButton);
 }
 
 function startingQuiz() {
-    startButton.text("Answer 1");
+    startButton.text("Answer");
     textInBox.text("This would be the 1st question");
     buttonMaker();
     buttonMaker();
     buttonMaker();
 }
 
-// startButton.on("click", startingQuiz());
-
-//Right now I am just trying to get the newButton to take on the the appropriate classes for styling
+startButton.on("click", startingQuiz);

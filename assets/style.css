@@ -52,3 +52,14 @@ footer {
     color: white;
     font-size: 20px; 
 }
+
+.answer-button {
+    padding-bottom: 10px;
+    padding-top: 11px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 15%;
+    background-color: red;
+    color: white;
+    border-radius: 25%;
+}
