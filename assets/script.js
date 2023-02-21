@@ -37,14 +37,14 @@ function buttonMaker(butNum, possibleAnswer) {
 function startingQuiz() {
     startButton.remove();
     var myTimer = setInterval(intervalBegins, 1000);
-    textInBox.text("Question 0");
-    buttonMaker("button0", "answer0");
+    textInBox.text("What is jquery?");
+    buttonMaker("button0", "a newer version of javascript");
     // var button0 = $("#button0");
-    buttonMaker("button1", "answer0");
+    buttonMaker("button1", "external library of stylings");
     // var button1 = $("#button1");
-    buttonMaker("button2", "answer0");
+    buttonMaker("button2", "a way to call elements");
     // var button2 = $("#button2");
-    buttonMaker("button3", "answer0");
+    buttonMaker("button3", 'javascript "slang"');
     // var button3 = $("#button3");
     return myTimer;
 }
@@ -52,122 +52,113 @@ function startingQuiz() {
 //Fuctions used regarding question 0
 function rightAnswer0() {
     yourScore++
-    textInBox.text("Question 1");
+    textInBox.text("What array method adds a value to the end of the array?");
     button0.remove();
     button1.remove();
     button2.remove();
     button3.remove();
-    buttonMaker("button4", "answer1");
-    buttonMaker("button5", "answer1");
-    buttonMaker("button6", "answer1");
-    buttonMaker("button7", "answer1");
+    buttonMaker("button4", "array.concat()");
+    buttonMaker("button5", "array.fill()");
+    buttonMaker("button6", "array.pop()");
+    buttonMaker("button7", "array.push()");
     $("#scoreBoard").text("Your Score: " + yourScore + "    " + yourInitials);
     return yourScore;
 }
 
 function wrongAnswer0() {
     quizTimer = quizTimer - 5000;
-    var newContent = document.createTextNode("Answer 1");
-    textInBox.text("Question 1");
+    textInBox.text("What array method adds a value to the end of the array?");
     button0.remove();
     button1.remove();
     button2.remove();
     button3.remove();
-    buttonMaker("button4", "answer1");
-    buttonMaker("button5", "answer1");
-    buttonMaker("button6", "answer1");
-    buttonMaker("button7", "answer1");
+    buttonMaker("button4", "array.concat()");
+    buttonMaker("button5", "array.fill()");
+    buttonMaker("button6", "array.pop()");
+    buttonMaker("button7", "array.push()");
+    $("#scoreBoard").text("Your Score: " + yourScore + "    " + yourInitials);
     return quizTimer;
 }
 
 //Functions for Question 1
 function rightAnswer1() {
     yourScore++
-    textInBox.text("Question 2");
+    textInBox.text("Variables made in a function are available outside the function by default");
     button4.remove();
     button5.remove();
     button6.remove();
     button7.remove();
-    buttonMaker("button8", "answer2");
-    buttonMaker("button9", "answer2");
-    buttonMaker("button10", "answer2");
-    buttonMaker("button11", "answer2");
+    buttonMaker("button8", "FALSE");
+    buttonMaker("button9", "TRUE");
     $("#scoreBoard").text("Your Score: " + yourScore + "    " + yourInitials);
     return yourScore;
 }
 
 function wrongAnswer1() {
     quizTimer = quizTimer - 5000;
-    textInBox.text("Question 2");
+    textInBox.text("Variables made in a function are available outside the function by default");
     button4.remove();
     button5.remove();
     button6.remove();
     button7.remove();
-    buttonMaker("button8", "answer2");
-    buttonMaker("button9", "answer2");
-    buttonMaker("button10", "answer2");
-    buttonMaker("button11", "answer2");
+    buttonMaker("button8", "FALSE");
+    buttonMaker("button9", "TRUE");
     return quizTimer;
 }
 
 //Functions for question 2
 function rightAnswer2() {
     yourScore++
-    textInBox.text("Question 3");
+    textInBox.text("What is the tree like structure that is manipulatable by JavaScript, which changes the HTML?");
     button8.remove();
     button9.remove();
-    button10.remove();
-    button11.remove();
-    buttonMaker("button12", "answer3");
-    buttonMaker("button13", "answer3");
-    buttonMaker("button14", "answer3");
-    buttonMaker("button15", "answer3");
+    buttonMaker("button12", "API");
+    buttonMaker("button13", "SSH");
+    buttonMaker("button14", "DOM");
+    buttonMaker("button15", "UI");
     $("#scoreBoard").text("Your Score: " + yourScore + "    " + yourInitials);
     return yourScore;
 }
 
 function wrongAnswer2() {
     quizTimer = quizTimer - 5000;
-    textInBox.text("Question 3");
+    textInBox.text("What is the tree like structure that is manipulatable by JavaScript, which changes the HTML?");
     button8.remove();
     button9.remove();
-    button10.remove();
-    button11.remove();
-    buttonMaker("button12", "answer3");
-    buttonMaker("button13", "answer3");
-    buttonMaker("button14", "answer3");
-    buttonMaker("button15", "answer3");
+    buttonMaker("button12", "API");
+    buttonMaker("button13", "SSH");
+    buttonMaker("button14", "DOM");
+    buttonMaker("button15", "UI");
     return quizTimer;
 }
 
 //Functions for Question 3
 function rightAnswer3() {
     yourScore++
-    textInBox.text("Question 4");
+    textInBox.text("What command is used to initiate conditional statements?");
     button12.remove();
     button13.remove();
     button14.remove();
     button15.remove();
-    buttonMaker("button16", "answer4");
-    buttonMaker("button17", "answer4");
-    buttonMaker("button18", "answer4");
-    buttonMaker("button19", "answer4");
+    buttonMaker("button16", "if () {}");
+    buttonMaker("button17", "for () {}");
+    buttonMaker("button18", "else () {}");
+    buttonMaker("button19", "if else () {}");
     $("#scoreBoard").text("Your Score: " + yourScore + "    " + yourInitials);
     return yourScore;
 }
 
 function wrongAnswer3() {
     quizTimer = quizTimer - 5000;
-    textInBox.text("Question 4");
-    textInBox.text("Question 4");
+    textInBox.text("What command is used to initiate conditional statements?");
     button12.remove();
     button13.remove();
     button14.remove();
     button15.remove();
-    buttonMaker("button16", "answer4");
-    buttonMaker("button17", "answer4");
-    buttonMaker("button18", "answer4");
-    buttonMaker("button19", "answer4");
+    buttonMaker("button16", "if () {}");
+    buttonMaker("button17", "for () {}");
+    buttonMaker("button18", "else () {}");
+    buttonMaker("button19", "if else () {}");
     return quizTimer;
 }
 
