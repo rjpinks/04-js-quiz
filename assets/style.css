@@ -63,3 +63,8 @@ footer {
     color: white;
     border-radius: 25%;
 }
+
+body p {
+    font-weight: bolder;
+    font-size: 30px;
+}
